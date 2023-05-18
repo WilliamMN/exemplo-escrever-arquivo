@@ -32,16 +32,16 @@ public class EditorDeArquivo {
         return new FileWriter(TMP_DIR + nome);
     }
 
-    public Path buscarArquivo(String arquivo) {
-        return Paths.get(TMP_DIR + arquivo);
+    public String buscarArquivo(String arquivo) {
+        return Paths.get(TMP_DIR + arquivo).toString();
     }
 
     public void escreverArquivo(String texto) {
         try {
             String nomeArquivo = LocalDate.now().toString() + "log.txt";
             String momento = LocalDateTime.now().toString();
-            if (new File(this.buscarArquivo(nomeArquivo).toString()).exists()) {
-                texto = String.format("%s\n%s - %s", this.lerArquivo(this.buscarArquivo(nomeArquivo).toString()), momento, texto);
+            if (new File(this.buscarArquivo(nomeArquivo)).exists()) {
+                texto = String.format("%s\n%s - %s", this.lerArquivo(this.buscarArquivo(nomeArquivo)), momento, texto);
             } else {
                 texto = String.format("%s - %s", momento, texto);
             }
