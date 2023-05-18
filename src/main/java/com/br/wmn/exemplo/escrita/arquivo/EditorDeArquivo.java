@@ -1,4 +1,4 @@
-package com.br.wmn.teste.timer;
+package com.br.wmn.exemplo.escrita.arquivo;
 
 import java.io.File;
 import java.io.FileWriter;

@@ -1,4 +1,4 @@
-package com.br.wmn.teste.timer;
+package com.br.wmn.exemplo.escrita.arquivo;
 
 import com.github.britooo.looca.api.core.Looca;
 import java.time.LocalDate;
